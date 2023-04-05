@@ -1,0 +1,39 @@
+.sidebar {
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all;
+    
+    .top{
+        padding-left: 1.7rem;
+    }
+    .menu__item {
+        padding-left: 1.7rem;
+        transition: all;
+    } 
+    // height: 3.7rem;
+}
+
+.menu__item:hover {
+    background: #39cdcc30;
+    border-left: 5px solid #39CDCC;
+    cursor: pointer;
+}
+
+.group__menu .title {
+    padding-left: 1.7rem;
+}
+
+.active__menu {
+    background: #39cdcc30;
+    border-left: 5px solid #39CDCC;
+}
+
+.sidemenu__control{ 
+    display: none;
+}
+
+.sidebar.show {
+    display: block;
+}

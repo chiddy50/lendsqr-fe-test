@@ -1,0 +1,39 @@
+.main__container {
+    display: grid;
+    margin: 86px auto 0;
+    grid-template-columns: 14rem auto;
+    // width: 96%;
+    // gap: 1.8rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1028px) {
+    .main__container {
+        grid-template-columns: auto; 
+    }
+
+    .sidemenu__control{ 
+        display: inline-block;
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        background: #fff;
+        width: 14rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100%;
+        padding-right: var(--card-padding);
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}

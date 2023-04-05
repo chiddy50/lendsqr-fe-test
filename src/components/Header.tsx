@@ -14,7 +14,6 @@ function Header(){
         shadow-sm 
         bg-white 
         px-10 
-        py-6
         grid-cols-2
         '>
             <div className='flex items-center justify-between '>
