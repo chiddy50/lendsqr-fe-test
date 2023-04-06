@@ -3,6 +3,7 @@ import full_star from '../assets/icons/full_star.svg'
 import empty_star from '../assets/icons/empty_star.svg'
 
 function UserDetails(){
+    
     return (
         <>
             <div className="my-8 flex items-center gap-3">

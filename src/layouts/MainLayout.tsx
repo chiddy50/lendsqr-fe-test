@@ -11,8 +11,7 @@ function Layout() {
                 <div className="m-5 main__container">
                     <Sidebar />
 
-                    <section className='p-7 text-dark-blue'>
-                        
+                    <section className='p-7 text-dark-blue page__content'>                        
                         <Outlet />
                     </section>
                 </div>

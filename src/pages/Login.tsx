@@ -15,7 +15,7 @@ function Login(){
                         <img src={login_img} alt="login img" className='' />                    
                     </div>
                 </div>
-                <div className='login__box'>
+                <div className='login__box text-dark-blue'>
                     <div className="login__form">
                         <div className="mb-12">
                             <h1 className="text-4xl font-extrabold mb-3 overflow-hidden">Welcome!</h1>

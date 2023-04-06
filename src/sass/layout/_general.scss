@@ -1,17 +1,33 @@
 .main__container {
-    display: grid;
     margin: 86px auto 0;
-    grid-template-columns: 14rem auto;
+    // display: grid;
+    // grid-template-columns: 14rem auto;
     // width: 96%;
     // gap: 1.8rem;
 }
 
+.page__content {
+    margin-left: 15%;
+    width: 85%;
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1328px) {
+    .sidebar {
+        width: 20%;
+    }
 
+    .page__content {
+        margin-left: 20%;
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 1028px) {
+    .page__content {
+        margin-left: 0%;
+        width: 100%;
+    }
+
     .main__container {
         grid-template-columns: auto; 
     }
@@ -34,6 +50,6 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+// @media screen and (max-width: 768px) {
     
-}
+// }

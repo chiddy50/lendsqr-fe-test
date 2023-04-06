@@ -1,12 +1,21 @@
 .sidebar {
     background: #fff;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     transition: all;
+    // min-height: 100vh;
+    
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 15%;
     
     .top{
         padding-left: 1.7rem;
+        margin-top: 86px;
     }
     .menu__item {
         padding-left: 1.7rem;
