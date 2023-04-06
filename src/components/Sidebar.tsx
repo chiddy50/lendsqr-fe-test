@@ -18,6 +18,8 @@ import reports_icon from '../assets/icons/reports_icon.svg'
 import preferences_icon from '../assets/icons/preferences_icon.svg'
 import percentage_icon from '../assets/icons/percentage_icon.svg'
 import audit_icon from '../assets/icons/audit_icon.svg'
+import system_messages_icon from '../assets/icons/system_messages_icon.svg'
+import logout_icon from '../assets/icons/logout_icon.svg'
 
 function Sidebar(){
     return (
@@ -112,7 +114,7 @@ function Sidebar(){
                 </div>
             </div>
 
-            <div className="group__menu flex flex-col mt-2">
+            <div className="group__menu flex flex-col mt-2 pb-7">
                 <h5 className="py-3 font-bold text-xs title">SETTINGS</h5>
                 
                 <div className="flex menu__item items-center py-3 gap-2">
@@ -126,6 +128,22 @@ function Sidebar(){
                 <div className="flex menu__item items-center py-3 gap-2">
                     <img src={audit_icon} alt="dashboard icon" />
                     <span className="text-xs">Audit Logs</span>
+                </div>
+                <div className="flex menu__item items-center py-3 gap-2">
+                    <img src={system_messages_icon} alt="system messages icon" />
+                    <span className="text-xs">Sytem Messages</span>
+                </div>
+            </div>
+
+            <div className="logout__box border-t border-gray-200 pt-3">
+                <div className="flex menu__item items-center py-3 gap-2">
+                    <img src={logout_icon} alt="logout icon" />
+                    <span className="text-xs">Logout</span>
+                </div>
+                <div className="flex menu__item items-center py-3 gap-2">
+                    <p className="my-1 text-xs">
+                    v1.2.0
+                    </p>
                 </div>
             </div>
 
