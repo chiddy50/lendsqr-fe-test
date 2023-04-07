@@ -10,24 +10,34 @@ import icon_3 from '../assets/img/icon_3.svg'
 import icon_4 from '../assets/img/icon_4.svg'
 import { UsersContext } from '../context/UsersProvider'
 
-function Home(){
+function Dashboard(){
     const { users, setUsers } = useContext(UsersContext)
     const [ loading, setLoading ] = useState<boolean>(false)
 
-    const fetchProducts = async () => {
+    const fetchUsers = async () => {
         setLoading(true)
         try {
             const req = await fetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users')
             const data = await req.json()
             setUsers(data);
+            localStorage.setItem('users', JSON.stringify(data));
         } catch (err) {
             if (err instanceof Error) console.log(err.message); 
         } finally {
-            setLoading(false)
+            setLoading(false)   
+            fetchLocalData()
         }
     }
+
+    const fetchLocalData = () => {
+        const users_data = JSON.parse(localStorage.getItem('users') || 'null');        
+        if (users_data && users.length < 1) {            
+            setUsers(users_data);
+        }
+    }
+
     useEffect(() => {
-        fetchProducts()
+        fetchUsers()
     }, []);
 
     return (
@@ -60,4 +70,4 @@ function Home(){
     )
 }
 
-export default Home
+export default Dashboard
