@@ -9,7 +9,7 @@ import activate_icon from '../assets/icons/activate_icon.svg'
 
 function DataTable(): JSX.Element {
     const { users } = useContext(UsersContext)
-    const [itemsToShow, setItemsToShow] = useState<number>(10); 
+    const [itemsToShow, setItemsToShow] = useState<number>(5); 
     const [showFilter, setShowFilter] = useState<boolean>(false);
 
     const formatDate = (value: string) => {
@@ -111,13 +111,12 @@ function DataTable(): JSX.Element {
                                         userdetails__nav
                                         
                                         ">
+                                            <Link to={`/user-details/${user.id}`}>
                                             <span className="flex gap-3 items-center p-3 cursor-pointer hover:bg-gray-200">
                                                 <img src={eye_icon} alt="eye icon" />
-                                                {/* <Link  className="text-xs" to={`/user-details/${user.id}`}> */}
-                                                {/* <span className="text-xs">View Details</span> */}
-                                                {/* <Link/> */}
-                                                <Link to={`/user-details/${user.id}`}>View Details</Link>
+                                                <span className="text-xs">View Details</span>
                                             </span>
+                                            </Link>
                                             <span className="flex gap-3 items-center p-3 cursor-pointer hover:bg-gray-200">
                                                 <img src={blacklist_icon} alt="eye icon" />                                                
                                                 <span className="text-xs">Blacklist User</span>
@@ -140,10 +139,21 @@ function DataTable(): JSX.Element {
                     </tbody>
                 </table> }
             </div>
-            <div className="mt-4 flex justify-between">
+            <div className="
+            mt-4
+            justify-between
+            xs:gap-3
+            sm:gap-3
+            flex
+            xs:flex-col 
+            sm:flex-col 
+            md:flex-row 
+            lg:flex-row 
+            xl:flex-row 
+            ">
                 <div className="flex items-center gap-4 text-xs">
                     <span>Showing</span>
-                    <select className='px-2 py-1 bg-slate-300 rounded-md' 
+                    <select className='px-2 py-1 bg-gray-200 outline-none rounded-md' 
                     onChange={(e) => setItemsToShow(parseInt(e.target.value))}>
                         <option value="5">5</option>
                         <option value="10">10</option>
@@ -156,18 +166,17 @@ function DataTable(): JSX.Element {
                 </div>
                 
                 <div className="text-xs">
-                    <ul className='flex items-center gap-5'>
-                        <li>
+                    <ul className='flex items-center gap-5 text-sm'>
+                        <li className='px-2 py-1 bg-gray-200 rounded-md'>
                             <i className="bx bx-chevron-left"></i>
                         </li>
                         <li>1</li>
                         <li>2</li>
                         <li>3</li>
-                        <li>4</li>
                         <li>...</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li className='px-2 py-1 bg-gray-200 rounded-md'>
                             <i className="bx bx-chevron-right"></i>
                         </li>
                     </ul>

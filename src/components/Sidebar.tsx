@@ -22,6 +22,11 @@ import system_messages_icon from '../assets/icons/system_messages_icon.svg'
 import logout_icon from '../assets/icons/logout_icon.svg'
 
 function Sidebar(){
+
+    const logout = () => {
+        window.location.href = '/login';
+    }
+
     return (
         <section className='sidebar text-dark-blue' id='sidebar'>
           
@@ -136,7 +141,8 @@ function Sidebar(){
             </div>
 
             <div className="logout__box border-t border-gray-200 pt-3">
-                <div className="flex menu__item items-center py-3 gap-2">
+                <div onClick={logout}  
+                className="flex menu__item items-center py-3 gap-2">
                     <img src={logout_icon} alt="logout icon" />
                     <span className="text-xs">Logout</span>
                 </div>

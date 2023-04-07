@@ -14,8 +14,21 @@ function Dashboard(){
     const { users, setUsers } = useContext(UsersContext)
     const [ loading, setLoading ] = useState<boolean>(false)
 
+    useEffect(() => {
+        const auth = localStorage.getItem('auth');
+        if (!auth) {
+            window.location.href = '/login';
+        }
+    }, [])
+
+    useEffect(() => {
+        fetchUsers()
+    }, []);
+
     const fetchUsers = async () => {
+        
         setLoading(true)
+
         try {
             const req = await fetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users')
             const data = await req.json()
@@ -35,10 +48,6 @@ function Dashboard(){
             setUsers(users_data);
         }
     }
-
-    useEffect(() => {
-        fetchUsers()
-    }, []);
 
     return (
         <>

@@ -6,6 +6,7 @@ import MainLayout from './layouts/MainLayout';
 import Dashboard from './pages/Dashboard';
 import UserDetails from './pages/UserDetails';
 import Login from './pages/Login';
+import ErrorPage from './pages/ErrorPage';
 import { UsersProvider } from './context/UsersProvider'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <UsersProvider>
         <BrowserRouter>
           <Routes>
+            <Route path='*' element={<ErrorPage />} />
 
             <Route path='/' element={ <MainLayout /> }>
               <Route index element={ <Dashboard /> } />

@@ -1,9 +1,5 @@
 .main__container {
     margin: 86px auto 0;
-    // display: grid;
-    // grid-template-columns: 14rem auto;
-    // width: 96%;
-    // gap: 1.8rem;
 }
 
 .page__content {
@@ -23,8 +19,6 @@
     right: 0;
     display: none;
     z-index: 3;
-    // width: 100px;
-    // border: 1px dashed #000;
 }
 
 select.custom__select {
@@ -78,6 +72,3 @@ select.custom__select {
     }
 }
 
-// @media screen and (max-width: 768px) {
-    
-// }
