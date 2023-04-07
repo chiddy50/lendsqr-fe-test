@@ -1,0 +1,74 @@
+.main__container {
+    margin: 86px auto 0;
+}
+
+.page__content {
+    margin-left: 15%;
+    width: 85%;
+}
+
+.table__dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+}
+
+.userdetails__nav {
+    top: 1rem;
+    right: 0;
+    display: none;
+    z-index: 3;
+}
+
+select.custom__select {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAyMCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjAwMDUgMTAuMzA3OUM5LjQ1Mjk0IDEwLjMwODkgOC45MTA1NyAxMC4yMDE5IDguNDA0MzkgOS45OTMxN0M3Ljg5ODIxIDkuNzg0NCA3LjQzODE0IDkuNDc3OTIgNy4wNTA0OCA5LjA5MTI0TDAuMjQyMTQ3IDIuMjgyOUMwLjA4NTIyNjkgMi4xMjU5OCAtMC4wMDI5Mjk2OSAxLjkxMzE1IC0wLjAwMjkyOTY5IDEuNjkxMjRDLTAuMDAyOTI5NjkgMS40NjkzMiAwLjA4NTIyNjkgMS4yNTY0OSAwLjI0MjE0NyAxLjA5OTU3QzAuMzk5MDY2IDAuOTQyNjQ5IDAuNjExODk1IDAuODU0NDkyIDAuODMzODEzIDAuODU0NDkyQzEuMDU1NzMgMC44NTQ0OTIgMS4yNjg1NiAwLjk0MjY0OSAxLjQyNTQ4IDEuMDk5NTdMOC4yMzM4MSA3LjkwNzlDOC43MDI1NiA4LjM3NjA3IDkuMzM3OTggOC42MzkwNCAxMC4wMDA1IDguNjM5MDRDMTAuNjYzIDguNjM5MDQgMTEuMjk4NCA4LjM3NjA3IDExLjc2NzEgNy45MDc5TDE4LjU3NTUgMS4wOTk1N0MxOC43MzI0IDAuOTQyNjQ5IDE4Ljk0NTIgMC44NTQ0OTIgMTkuMTY3MSAwLjg1NDQ5MkMxOS4zODkxIDAuODU0NDkyIDE5LjYwMTkgMC45NDI2NDkgMTkuNzU4OCAxLjA5OTU3QzE5LjkxNTcgMS4yNTY0OSAyMC4wMDM5IDEuNDY5MzIgMjAuMDAzOSAxLjY5MTI0QzIwLjAwMzkgMS45MTMxNSAxOS45MTU3IDIuMTI1OTggMTkuNzU4OCAyLjI4MjlMMTIuOTUwNSA5LjA5MTI0QzEyLjU2MjggOS40Nzc5MiAxMi4xMDI3IDkuNzg0NCAxMS41OTY2IDkuOTkzMTdDMTEuMDkwNCAxMC4yMDE5IDEwLjU0OCAxMC4zMDg5IDEwLjAwMDUgMTAuMzA3OVoiIGZpbGw9IiM5NzlBQjgiLz4KPC9zdmc+Cg==") no-repeat;
+    background-position: calc(100% - 1.5rem) center !important;
+    color: #aaa;
+    background-size: 10px;
+    outline: none;
+    -moz-appearance:none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding-right: 2rem !important;
+}
+
+@media screen and (max-width: 1328px) {
+    .sidebar {
+        width: 20%;
+    }
+
+    .page__content {
+        margin-left: 20%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    .page__content {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .main__container {
+        grid-template-columns: auto; 
+    }
+
+    .sidemenu__control{ 
+        display: inline-block;
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        background: #fff;
+        width: 14rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100%;
+        padding-right: var(--card-padding);
+        overflow-y: auto;
+    }
+}
+

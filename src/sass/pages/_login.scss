@@ -1,0 +1,30 @@
+.login__box{
+    position: relative;
+}
+
+.login__form{
+    position: absolute;
+    width: 80%;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile__logo{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .mobile__logo{
+        display: flex;
+    }
+
+    .login__page {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+        .login__left {
+            display: none;
+        }
+    }
+}

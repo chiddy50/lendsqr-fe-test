@@ -1,0 +1,17 @@
+.data__table {
+    min-width: 1200px;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    & tbody tr:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.userdetail {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
