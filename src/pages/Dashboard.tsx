@@ -14,12 +14,12 @@ function Dashboard(){
     const { users, setUsers } = useContext(UsersContext)
     const [ loading, setLoading ] = useState<boolean>(false)
 
-    useEffect(() => {
-        const auth = localStorage.getItem('auth');
-        if (!auth) {
-            window.location.href = '/login';
-        }
-    }, [])
+    // useEffect(() => {
+    //     const auth = localStorage.getItem('auth');
+    //     if (!auth) {
+    //         window.location.href = '/login';
+    //     }
+    // }, [])
 
     useEffect(() => {
         fetchUsers()
