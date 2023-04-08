@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { HashRouter, Routes, Route} from "react-router-dom";
 
 import MainLayout from './layouts/MainLayout';
 import Dashboard from './pages/Dashboard';
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App bg-gray-100 min-h-screen overflow-x-hidden">
       <UsersProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path='*' element={<ErrorPage />} />
 
@@ -24,7 +24,7 @@ function App() {
             <Route path="/login" element={ <Login /> } />
             
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </UsersProvider>
     </div>
   )
