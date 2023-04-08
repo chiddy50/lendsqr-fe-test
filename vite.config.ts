@@ -8,7 +8,6 @@ export default defineConfig({
     react(),
     // sassPlugin(),
   ],
-  // base: '/',
   build: {
     outDir: 'dist',
   },
