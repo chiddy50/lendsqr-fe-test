@@ -24,7 +24,7 @@ import logout_icon from '../assets/icons/logout_icon.svg'
 function Sidebar(){
 
     const logout = () => {
-        window.location.href = '/login';
+        window.location.href = '#/login';
     }
 
     return (

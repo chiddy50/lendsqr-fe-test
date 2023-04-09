@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext, useState,  } from 'react';
 
 import DataTable from '../components/DataTable';
 import DashboardStat from '../components/DashboardStat';
@@ -13,13 +13,6 @@ import { UsersContext } from '../context/UsersProvider'
 function Dashboard(){
     const { users, setUsers } = useContext(UsersContext)
     const [ loading, setLoading ] = useState<boolean>(false)
-
-    useEffect(() => {
-        const auth = localStorage.getItem('auth');
-        if (!auth) {
-            window.location.href = '/login';
-        }
-    }, [])
 
     useEffect(() => {
         fetchUsers()
