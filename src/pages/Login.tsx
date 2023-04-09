@@ -34,7 +34,7 @@ const Login = () => {
                 email, password
             }
             localStorage.setItem('auth', JSON.stringify(auth));
-            window.location.href = 's/';
+            window.location.href = '/';
         }, 3000);
         
     }
