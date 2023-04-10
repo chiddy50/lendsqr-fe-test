@@ -25,6 +25,15 @@ const Login = () => {
             setPasswordError(true)
             return;
         }
+
+        let auth = { email, password }
+        localStorage.setItem('auth', JSON.stringify(auth))
+
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+            window.location.href = '#/';
+        }, 3000);
     }
 
     const togglePasswordType = () => {
